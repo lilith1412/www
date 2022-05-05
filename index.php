@@ -38,7 +38,7 @@
           foreach ($car_brands as $brand_label => $brand_data) {
           echo '<tr>';
             echo '<td>';
-              echo '<a href="index.php?brand_label='.$brand_label.'">'.$brand_label.'</a>';
+              echo '<a href="show_brand_data.php?brand_label='.$brand_label.'">'.$brand_label.'</a>';
             echo '</td>';
             echo '<td>';
               echo $brand_data['country'];
