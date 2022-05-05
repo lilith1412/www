@@ -25,7 +25,7 @@
             $brand_data = $car_brands[$_REQUEST['brand_label']];
             echo '<tr>';
               echo '<td>';
-                echo $_REQUEST['brand_label'];
+              echo '<a href="index.php?brand_label='.$_REQUEST['brand_label'].'">'.$_REQUEST['brand_label'].'</a>';
               echo '</td>';
               echo '<td>';
                 echo $brand_data['country'];
@@ -38,7 +38,7 @@
           foreach ($car_brands as $brand_label => $brand_data) {
           echo '<tr>';
             echo '<td>';
-              echo $brand_label;
+              echo '<a href="index.php?brand_label='.$brand_label.'">'.$brand_label.'</a>';
             echo '</td>';
             echo '<td>';
               echo $brand_data['country'];
