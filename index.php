@@ -18,6 +18,9 @@
           </thead>
         <tbody>
           <?php
+          echo var_dump($_GET);
+          echo '----------------<br>';
+          echo var_dump($_POST);
           if(array_key_exists('brand_label', $_REQUEST) && array_key_exists($_REQUEST['brand_label'], $car_brands)){
             $brand_data = $car_brands[$_REQUEST['brand_label']];
             echo '<tr>';
