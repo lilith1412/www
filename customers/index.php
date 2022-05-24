@@ -46,7 +46,7 @@
                     echo $row['City'];
                   echo '</td>';
                   echo '<td>';
-                    echo '<a href="#">Ver</a>&nbsp;&nbsp;';
+                    echo '<a href="show.php?id='.$row['CustomerID'].'">Ver</a>&nbsp;&nbsp;';
                     echo '<a href="#">Editar</a>&nbsp;&nbsp;';
                     echo '<a href="#">Eliminar</a>';
                   echo '</td>';
