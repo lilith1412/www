@@ -48,7 +48,7 @@
                   echo '<td>';
                     echo '<a href="show.php?id='.$row['CustomerID'].'">Ver</a>&nbsp;&nbsp;';
                     echo '<a href="#">Editar</a>&nbsp;&nbsp;';
-                    echo '<a href="#">Eliminar</a>';
+                    echo '<a href="delete.php?id='.$row['CustomerID'].'">Eliminar</a>';
                   echo '</td>';
                 echo '</tr>';
                 }
