@@ -28,7 +28,7 @@
                     <td>CustomerID</td>
                     <td>CompanyName</td>
                     <td>City</td>
-                    <td><a href="#">Nuevo Cliente</a></td>
+                    <td><a href="new.php">Nuevo Cliente</a></td>
                   </tr>
                 </thead>
               <tbody>
