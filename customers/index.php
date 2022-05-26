@@ -1,10 +1,11 @@
 
        <?php
+       session_start();
        include '../header.php';
        echo $header_html;
        $con = mysqli_connect("db", "root", "root", "northwind");
        $sql = "SELECT * FROM customers";
-       $result = mysqli_query($con, $sql)
+       $result = mysqli_query($con, $sql);
         ?>
 
         <div class="container-fluid p-5 bg-primary text-white text-center">
@@ -12,6 +13,23 @@
           <p>En esta lista se muestran todos los clientes registrados en la plataforma</p>
         </div>
 
+        <?php
+         if(isset($_SESSION["alert"]))
+          {
+            echo '<div class="container mt-5">
+              <div class="row">
+                <div class="col-sm-2">&nbsp;</div>
+                <div class="col-sm-8">
+                  <div class="alert alert-success alert-dismissible">
+                  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>'
+                    .$_SESSION["alert"].'
+                </div>
+                </div>
+            </div>';
+            unset($_SESSION["alert"]);
+        }
+
+        ?>
         <div class="container mt-5">
           <div class="row">
             <div class="col-sm-2"><a href="../index.php">Volver</a></div>
