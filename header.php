@@ -1,4 +1,5 @@
 <?php
+session_start();
 $header_html = '<html>
     <head>
         <title>SIN - 2022-I</title>
@@ -7,7 +8,17 @@ $header_html = '<html>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </head>
     <body>';
-
+    if(isset($_SESSION["user_connected_id"])){
+      $con = mysqli_connect("db", "root", "root", "northwind");
+      $sql = "SELECT * FROM users where id = '".$_SESSION["user_connected_id"]."'";
+      $result = mysqli_query($con, $sql);
+      $user = mysqli_fetch_array($result);
+      echo "Hola:  ". $user['nombre'];
+      echo "&nbsp; ";
+      echo "<a href='http://localhost/www/logout.php'>Cerrar sesión</a>";
+    }else{
+      echo "<a href='http://localhost/www/login.php'>Ingresar</a>";
+    }
 $footer_html ='</body>
   </html>';
 ?>

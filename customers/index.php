@@ -1,6 +1,5 @@
 
        <?php
-       session_start();
        include '../header.php';
        echo $header_html;
        $con = mysqli_connect("db", "root", "root", "northwind");
