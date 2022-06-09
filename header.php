@@ -19,6 +19,10 @@ $header_html = '<html>
     }else{
       echo "<a href='http://localhost/www/login.php'>Ingresar</a>";
     }
+
+    if(isset($_SESSION["cart"]) && count($_SESSION["cart"]) > 0){
+      echo "&nbsp; | &nbsp; <a href='http://localhost/www/customers/cart.php'><span class='badge bg-secondary'>".count($_SESSION["cart"])."</span>&nbsp;Ir al carrito</a>";
+    }
 $footer_html ='</body>
   </html>';
 ?>

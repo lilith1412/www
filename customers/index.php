@@ -65,7 +65,8 @@
                   echo '<td>';
                     echo '<a href="show.php?id='.$row['CustomerID'].'">Ver</a>&nbsp;&nbsp;';
                     echo '<a href="#">Editar</a>&nbsp;&nbsp;';
-                    echo '<a href="delete.php?id='.$row['CustomerID'].'">Eliminar</a>';
+                    echo '<a href="delete.php?id='.$row['CustomerID'].'">Eliminar</a>&nbsp;';
+                    echo '<a href="add_to_cart.php?id='.$row['CustomerID'].'">Añadir</a>';
                   echo '</td>';
                 echo '</tr>';
                 }
