@@ -2,8 +2,6 @@
        <?php
        include '../header.php';
        echo $header_html;
-
-      echo "<pre>".var_dump($_SESSION["cart"])."</pre>";
         ?>
         <div class="container-fluid p-5 bg-primary text-white text-center">
           <h1>Carrito de compras</h1>
